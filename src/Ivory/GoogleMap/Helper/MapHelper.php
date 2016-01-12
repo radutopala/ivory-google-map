@@ -939,9 +939,8 @@ class MapHelper
         $options = array(
             'language'     => $map->getLanguage(),
             'other_params' => http_build_query(array(
-                'libraries' => 'geometry',
-                'sensor'    => 'false',
-            )),
+                'libraries' => 'geometry'
+            ))
         );
 
         $jsonOptions = substr(json_encode($options), 0, -1);

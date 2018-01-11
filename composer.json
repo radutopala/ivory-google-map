@@ -19,11 +19,9 @@
     "require-dev": {
         "phpunit/phpunit": "3.7.*",
         "kriswallsmith/buzz": "*",
-        "willdurand/geocoder": "*"
     },
     "suggest": {
-        "kriswallsmith/buzz": "Allows to use direction service",
-        "willdurand/geocoder": "Allows to use geocoding service"
+        "kriswallsmith/buzz": "Allows to use direction service"
     },
     "autoload": {
         "psr-0": {

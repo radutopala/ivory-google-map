@@ -936,11 +936,17 @@ class MapHelper
 
         $output = array();
 
+        $otherParams = array(
+            'libraries' => 'geometry',
+        );
+
+        if ($map->hasKey()) {
+            $otherParams['key'] = $map->getKey();
+        }
+
         $options = array(
             'language'     => $map->getLanguage(),
-            'other_params' => http_build_query(array(
-                'libraries' => 'geometry'
-            ))
+            'other_params' => http_build_query($otherParams),
         );
 
         $jsonOptions = substr(json_encode($options), 0, -1);

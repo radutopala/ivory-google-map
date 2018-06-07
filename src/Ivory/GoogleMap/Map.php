@@ -120,6 +120,9 @@ class Map extends AbstractJavascriptVariableAsset
     /** @var string */
     protected $language;
 
+    /** @var string|null */
+    protected $key;
+
     /**
      * Creates a map.
      */
@@ -131,6 +134,7 @@ class Map extends AbstractJavascriptVariableAsset
         $this->async = false;
         $this->autoZoom = false;
         $this->language = 'en';
+        $this->key = null;
 
         $this->center = new Coordinate();
         $this->bound = new Bound();
@@ -1178,5 +1182,29 @@ class Map extends AbstractJavascriptVariableAsset
     public function setLanguage($language)
     {
         $this->language = $language;
+    }
+
+    /**
+     * @return bool
+     */
+    public function hasKey()
+    {
+        return $this->key !== null;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getKey()
+    {
+        return $this->key;
+    }
+
+    /**
+     * @param string|null $key
+     */
+    public function setKey($key)
+    {
+        $this->key = $key;
     }
 }
